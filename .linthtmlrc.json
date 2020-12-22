@@ -22,7 +22,6 @@
   "img-req-src": true,
   "img-req-alt": "allownull",
   "indent-width": 2,
-  "indent-style": "spaces",
   "indent-width-cont": true,
   "input-radio-req-name": true,
   "spec-char-escape": true,
@@ -43,7 +42,7 @@
   "text-ignore-regex": "&",
   "title-no-dup": true,
   "line-end-style": "lf",
-  "attr-new-line": 2,
-  "attr-name-style": "dash",
+  "attr-new-line": 3,
+  "attr-name-style": false,
   "attr-no-unsafe-char": true
 }
