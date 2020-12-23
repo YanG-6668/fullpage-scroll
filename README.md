@@ -1,1 +1,1 @@
-- [FPS](https://fullpage-scroll.github.io/YanG-6668/)
+- [FPS](https://YanG-6668.github.io/fullpage-scroll/)
