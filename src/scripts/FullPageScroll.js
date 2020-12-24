@@ -24,7 +24,7 @@ export default class FullPageScroll {
     navigationList.innerHTML = navigationItem;
     navigationList.querySelectorAll('.navigation__link')[0].classList.add('is-active');
 
-    if (this.options.dots) {
+    if (this.options.dots && true) {
       this.root.appendChild(navigation);
     } else {
       return;
@@ -32,7 +32,7 @@ export default class FullPageScroll {
   }
 
   activeNavigationItem(index) {
-    if(this.options.dots) {
+    if(this.options.dots && true) {
       this.navigationLinks[index].classList.add('is-active');
       this.navigationLinks.forEach((item, i) => {
         if (index !== i) {
@@ -94,13 +94,35 @@ export default class FullPageScroll {
     }
   }
 
+  touchMove() {
+    this.sections.forEach( section => {
+      const touchArr = [];
+      section.addEventListener('touchmove', e => {
+        touchArr.push(e.changedTouches[0].screenY);
+        console.log(e.changedTouches[0].screenY);
+
+        if(touchArr[0] > touchArr[touchArr.length - 1]) {
+          console.log('down');
+          this.slideDown();
+          } else {
+          this.slideUp()
+        }
+      });
+    });
+  }
+
   setup() {
     this.createNavigation();
     this.clickTarget = this.clickScroll();
-    this.root.addEventListener("wheel", e => {
+
+    this.touchMove();
+
+    this.root.addEventListener('wheel', e => {
       if (e.deltaY > 0) {
+        // this.touchMove()
         this.slideDown();
       } else {
+        // this.touchMove()
         this.slideUp();
       }
     });
