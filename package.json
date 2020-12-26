@@ -40,5 +40,7 @@
   "mateAcademy": {
     "projectType": "layout"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^3.5.1"
+  }
 }
