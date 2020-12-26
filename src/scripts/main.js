@@ -1,7 +1,7 @@
 import FullPageScroll from './FullPageScroll';
 import { TimelineMax } from 'gsap';
 
-const p = new FullPageScroll('#pagescroll', {
+const fps = new FullPageScroll('#pagescroll', {
   dots: true,  // default false 
   duration: 1000, // default 500
   timingFunction: 'ease', //default linear
